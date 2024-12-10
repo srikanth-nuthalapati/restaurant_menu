@@ -9,7 +9,7 @@ app.use(cors())
 app.get("/menu",(req,res)=>{
     fs.readFile("day13/db.json",(err,data)=>{
         if(err) {
-            res.send("error",err.message);
+            res.send(err.message);
         }
         else{
             res.send(data)  
